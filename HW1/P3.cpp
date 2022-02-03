@@ -2,6 +2,7 @@
 #include<string>
 using namespace std;
 
+//Data structure for Grade
 struct GradeNode {
 	string name = " ";
 	int grade = 0;
@@ -10,7 +11,7 @@ struct GradeNode {
     }
 };
 
-
+//QuickSort
 void swap(GradeNode* a, GradeNode* b)
 {
     GradeNode t = *a;
@@ -18,11 +19,6 @@ void swap(GradeNode* a, GradeNode* b)
     *b = t;
 }
 
-/* This function takes last element as pivot, places
-   the pivot element at its correct position in sorted
-    array, and places all smaller (smaller than pivot)
-   to left of pivot and all greater elements to right
-   of pivot */
 int partition(GradeNode arr[], int low, int high)
 {
     GradeNode pivot = arr[high];    // pivot
@@ -42,10 +38,6 @@ int partition(GradeNode arr[], int low, int high)
     return (i + 1);
 }
 
-/* The main function that implements QuickSort
- arr[] --> Array to be sorted,
-  low  --> Starting index,
-  high  --> Ending index */
 void quickSort(GradeNode arr[], int low, int high)
 {
     if (low < high)

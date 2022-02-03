@@ -1,13 +1,14 @@
 #include <iostream>
 
 using namespace std;
-
+//Transfer data by pointer
 void SwapP(int *a,int *b){
 	int temp;
 	temp = *a;
 	*a = *b;
 	*b = temp;
 }
+//Transfer data by reference
 void SwapR(int &a, int &b){
 	int temp;
 	temp = b;
