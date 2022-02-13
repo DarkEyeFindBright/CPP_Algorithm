@@ -7,16 +7,15 @@ void merge(int arr[], int p, int q, int r) {
 
 	if (arr[q] <= arr[q + 1])
 		return;
-	cout << "Loop" << "/n";
 	int n1 = q - p + 1;
 	int n2 = r - q;
-	int* L = new int[n1+1];
-	int* R = new int[n2+1];
+	int* L = new int[n1 + 1];
+	int* R = new int[n2 + 1];
 	for (int i = 0; i < n1; i++) {
-		L[i] = arr[i+p];
+		L[i] = arr[i + p];
 	}
 	for (int i = 0; i < n2; i++) {
-		R[i] = arr[i + q+1];
+		R[i] = arr[i + q + 1];
 	}
 	L[n1] = INT_MAX;
 	R[n2] = INT_MAX;
@@ -58,7 +57,7 @@ int main() {
 	cout << "Enter the value of n "; // Entering Value of n
 	cin >> n;
 
-	int* A=new int[n];
+	int* A = new int[n];
 
 	cout << "Randomly Generated Numbers are : " << '\n'; // Printing Randomly Generated Numbers
 	for (int i = 0; i < n; i++) {
@@ -68,11 +67,9 @@ int main() {
 	}
 	cout << "\n";
 	cout << "Sorted Numbers are : " << '\n'; // Printing Sorted Numbers
-	mergeSort(A, 0, n-1);
-	for (int i = 0; i < 5; i++)
+	mergeSort(A, 0, n - 1);
+	for (int i = 0; i < n; i++)
 		cout << A[i] << "\t";
 	cout << endl;
 	return 0;
 }
-
-
